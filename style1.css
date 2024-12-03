@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lemonada', cursive;
+}
+
+body {
+  background-color: #f8f4e3; /* 浅米色背景 */
+  color: #fff; /* 白色字体 */
+}
+
+/* Header 样式 */
+header {
+  background-color: #6c4f3d; /* 深棕色 */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0e68c; /* 鼠标悬停时变色 */
+}
+
+.page {
+  padding: 50px 20px;
+  transition: all 0.3s; /* 添加过渡效果 */
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.2s; /* 添加卡片动画 */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  text-align: center;
+}
+
+.add-to-cart {
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e6b800;
+}
+
+/* 购物车侧边栏样式 */
+.cart-sidebar {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s;
+  overflow-y: auto;
+}
+
+.cart-sidebar h2 {
+  color: #ffcc00;
+}
+
+#cartItemsList {
+  list-style: none;
+  padding: 0;
+}
+
+#cartItemsList li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  color: #ffcc00;
+  cursor: pointer;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+#closeCartSidebar {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #6c4f3d;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

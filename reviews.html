@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Reviews - Rabbit Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Lemonada:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body, h1, p, a {
+      color: #3e2723;
+    }
+
+    .reviews-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .review {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+
+    .review:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .review:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .review:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .review:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .review:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .review p {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .review p:last-child {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+  <header id="header">
+    <div class="logo">
+      <img src="logo.png" alt="Rabbit Bakery Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="breads.html">Our Breads</a></li>
+        <li><a href="reviews.html">Customer Reviews</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="reviews" class="page">
+    <div class="heading">
+      <h1>Customer Reviews</h1>
+      <p>See what our customers are saying about us!</p>
+    </div>
+    <div class="reviews-container">
+      <div class="review">
+        <p>"The best bread I've ever tasted! Highly recommend the sourdough!"</p>
+        <p>- Sarah M.</p>
+      </div>
+      <div class="review">
+        <p>"Freshly baked every day! I love the whole wheat bread."</p>
+        <p>- John D.</p>
+      </div>
+      <div class="review">
+        <p>"Great selection and friendly staff. Will come back again!"</p>
+        <p>- Lisa K.</p>
+      </div>
+      <div class="review">
+        <p>"The bread is so yummy."</p>
+        <p>- Alex P.</p>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <p>Rabbit Bakery &copy; 2024</p>
+  </footer>
+</body>
+</html>
+
+
+

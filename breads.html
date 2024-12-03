@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Breads - Rabbit Bakery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Lemonada:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <script>
+    // Check if the user is logged in
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <header id="header">
+    <div class="logo">
+      <img src="logo.png" alt="Rabbit Bakery Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="breads.html">Our Breads</a></li>
+        <li><a href="reviews.html">Customer Reviews</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="special" class="page">
+    <div class="heading">
+      <h1>Our 10 Delicious Breads</h1>
+      <p>Try our freshly baked breads!</p>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="bread1.jpg" alt="Sourdough Loaf">
+        <p>Sourdough Loaf - RM8</p>
+        <button class="add-to-cart" data-name="Sourdough Loaf" data-price="8">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread2.jpg" alt="Whole Wheat Bread">
+        <p>Whole Wheat Bread - RM7</p>
+        <button class="add-to-cart" data-name="Whole Wheat Bread" data-price="7">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread3.jpg" alt="French Baguette">
+        <p>French Baguette - RM6</p>
+        <button class="add-to-cart" data-name="French Baguette" data-price="6">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread4.jpg" alt="Ciabatta">
+        <p>Ciabatta - RM5</p>
+        <button class="add-to-cart" data-name="Ciabatta" data-price="5">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread5.jpg" alt="Focaccia">
+        <p>Focaccia - RM9</p>
+        <button class="add-to-cart" data-name="Focaccia" data-price="9">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread6.jpg" alt="Rye Bread">
+        <p>Rye Bread - RM8</p>
+        <button class="add-to-cart" data-name="Rye Bread" data-price="8">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread7.jpg" alt="Multigrain Bread">
+        <p>Multigrain Bread - RM7</p>
+        <button class="add-to-cart" data-name="Multigrain Bread" data-price="7">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread8.jpg" alt="Garlic Bread">
+        <p>Garlic Bread - RM6</p>
+        <button class="add-to-cart" data-name="Garlic Bread" data-price="6">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread9.jpg" alt="Olive Bread">
+        <p>Olive Bread - RM10</p>
+        <button class="add-to-cart" data-name="Olive Bread" data-price="10">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="bread10.jpg" alt="Challah">
+        <p>Challah - RM12</p>
+        <button class="add-to-cart" data-name="Challah" data-price="12">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <h1>Our Bakery &copy; 2024</h1>
+  </footer>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const breadName = button.getAttribute('data-name');
+        const breadPrice = parseFloat(button.getAttribute('data-price'));
+
+        cart.push({ name: breadName, price: breadPrice });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${breadName} has been added to your cart!`);
+
+        // Redirect to cart page
+        window.location.href = "cart.html";
+      });
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+

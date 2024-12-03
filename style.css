@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lemonada', cursive;
+}
+
+body {
+  background: 
+    url('your-main-background.jpg') no-repeat center center fixed,
+    url('your-overlay-background.png') no-repeat center top;
+  background-size: cover, auto;
+  color: white; /* 将主字体颜色设为白色 */
+}
+
+header {
+  background: linear-gradient(rgba(107, 79, 61, 0.8), rgba(107, 79, 61, 0.8)), 
+              url('header-background.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.page {
+  padding: 50px 20px;
+  transition: all 0.3s;
+}
+
+.page:nth-of-type(even) {
+  background-color: rgba(240, 244, 248, 0.2);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white; /* 标题颜色 */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: url('card-background.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  color: white; /* 卡片内文字颜色 */
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.add-to-cart {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #e6b800;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 80%;
+  max-width: 600px;
+  color: white; /* 评论文字颜色 */
+}
+
+#cart {
+  background-color: rgba(240, 230, 140, 0.8);
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+#checkout {
+  background-color: #6c4f3d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#checkout:hover {
+  background-color: #5b3d32;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #6c4f3d;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+h1, h2 {
+  color: white;
+}
+
+
+
+
+
